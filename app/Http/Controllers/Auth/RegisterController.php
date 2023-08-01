@@ -24,7 +24,7 @@ class RegisterController extends Controller
             'hobbies' => 'required|array|min:3',
             'hobbies.*' => 'string',
             'instagram' => 'required|url',
-            'mobile_number' => 'required|digits',
+            'mobile_number' => 'required|digits:10',
         ];
 
         $request->validate($rules);

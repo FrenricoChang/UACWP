@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\FriendController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('home');
@@ -45,3 +46,6 @@ Route::get('/filter/gender', 'FilterController@filterByGender')->name('filter.ge
 
 Route::get('/search', 'SearchController@search')->name('search');
 
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
