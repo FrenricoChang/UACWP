@@ -21,7 +21,7 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
             'gender' => 'required|in:Male,Female',
-            'hobbies' => 'required|array|min:3',
+            'hobbies' => 'required|min:3',
             'hobbies.*' => 'string',
             'instagram' => 'required|url',
             'mobile_number' => 'required|digits:10',
